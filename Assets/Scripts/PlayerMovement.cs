@@ -19,7 +19,7 @@ public class PlayerMovement : MonoBehaviour
     [Tooltip("use this to apply movement in worldspace")]
     public CharacterController charC; //this is our reference variable to the character controller
     public Vector3 moveDir; //we will use this apply movement in worldspace
-    [Header("Speeds")]//headers create a jeader for the variable directly below
+    [Header("Speeds")]//headers create a header for the variable directly below
     public float moveSpeed = 5f;
     public float jumpSpeed = 8f, gravity = 20f;
     #endregion

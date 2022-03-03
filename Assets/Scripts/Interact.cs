@@ -58,16 +58,5 @@ public class Interact : MonoBehaviour
             }
         }
     }
-    private void OnGUI()
-    {
-        //start positions x and y //size x and y 
-        //GUI.Box(new Rect(0,0,0,0), "");
-        for (int x = 0; x < 16; x++)
-        {
-            for (int y = 0; y < 9; y++)
-            GUI.Box(new Rect(GameManager.scr.x*x, GameManager.scr.y*y, GameManager.scr.x, GameManager.scr.y),"");
-        }
-        GUI.Box(new Rect(0, 0, GameManager.scr.x*.25f, GameManager.scr.y*.25f), "");
-    }
 
  }

@@ -2,12 +2,10 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueOneChoice : MonoBehaviour
+public class DialogueOneChoice : Dialogue
 {
-    public string[] text;
+    [Header("Choice Index")] 
     public int choiceIndex;
-    public int index;
-    public bool showDlg;
 
     void OnGUI()
     {
@@ -56,6 +54,7 @@ public class DialogueOneChoice : MonoBehaviour
                 {
                     index = 0;
                     showDlg = false;
+                    GameManager.gamePlayStates = GamePlayStates.Game;
                 }
             }
         }

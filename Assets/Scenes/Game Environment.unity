@@ -139,6 +139,7 @@ GameObject:
   - component: {fileID: 134566650}
   - component: {fileID: 134566649}
   - component: {fileID: 134566656}
+  - component: {fileID: 134566657}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -153,7 +154,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134566648}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6a1778604d5700489f8d4133efa9d86, type: 3}
   m_Name: 
@@ -268,7 +269,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 134566648}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 12.8, y: 1, z: 28.7}
+  m_LocalPosition: {x: 12.8, y: 1, z: 25.45}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1831345376}
@@ -287,6 +288,64 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7c62468c97d5a74a83760ca304ebf39, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &134566657
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 134566648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 254368e50b0de0a408d747baec2aa3ed, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  UserName: lozzarella
+  damage: 10
 --- !u!1 &208693546
 GameObject:
   m_ObjectHideFlags: 0
@@ -329,7 +388,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &208693549
 MonoBehaviour:
@@ -338,7 +397,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 208693546}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0cc916c70f3c7014fb31d57643fc47a7, type: 3}
   m_Name: 
@@ -436,6 +495,160 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 50, y: -30, z: 0}
+--- !u!1 &599098605
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 599098610}
+  - component: {fileID: 599098609}
+  - component: {fileID: 599098608}
+  - component: {fileID: 599098607}
+  - component: {fileID: 599098606}
+  m_Layer: 0
+  m_Name: Chicken
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &599098606
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599098605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b195dfa1eb61d54389bf7276a3841d3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  cluck: {fileID: 0}
+--- !u!136 &599098607
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599098605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.5000001
+  m_Height: 2
+  m_Direction: 1
+  m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!23 &599098608
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599098605}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RayTracingMode: 2
+  m_RayTraceProcedural: 0
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_ReceiveGI: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+  m_AdditionalVertexStreams: {fileID: 0}
+--- !u!33 &599098609
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599098605}
+  m_Mesh: {fileID: 10206, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &599098610
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 599098605}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 18.3, y: 1.13, z: 30.321516}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1255705854
 GameObject:
   m_ObjectHideFlags: 0
@@ -449,6 +662,7 @@ GameObject:
   - component: {fileID: 1255705857}
   - component: {fileID: 1255705856}
   - component: {fileID: 1255705855}
+  - component: {fileID: 1255705860}
   m_Layer: 0
   m_Name: Stacy
   m_TagString: NPC
@@ -468,15 +682,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8be6191be55fcc4428249d9774bdede2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  text: []
-  choiceIndex: 2
+  text:
+  - 
+  - 
+  - 
+  - 
+  - 
   index: 0
+  showDlg: 0
+  choiceIndex: 2
   approval: 0
-  showDlg: 1
   likeText:
   - Hey Bestie!
-  - It's a lovely day for a picnic
-  - Would you like to have a picnic with me?
+  - Lovely day for a berry picking
+  - Want to come berry picking with me?
   - Gosh the sun is shining!
   - Hope to see you soon!
   neutralText:
@@ -524,7 +743,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 4c657351bb73edb45b7bdc92546d6129, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -562,12 +781,70 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1255705854}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.994828, y: 1, z: 31.3}
+  m_LocalPosition: {x: 15.96, y: 1, z: 31.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1255705860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1255705854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e524061f3b424714daf70f217af3796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  bottle: {fileID: 0}
+  soul: 1
 --- !u!1 &1467153428
 GameObject:
   m_ObjectHideFlags: 0
@@ -735,7 +1012,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1831345373}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c6a1778604d5700489f8d4133efa9d86, type: 3}
   m_Name: 
@@ -837,7 +1114,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1968396415
 GameObject:
@@ -932,7 +1209,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1972680614
 GameObject:
@@ -947,6 +1224,7 @@ GameObject:
   - component: {fileID: 1972680617}
   - component: {fileID: 1972680616}
   - component: {fileID: 1972680615}
+  - component: {fileID: 1972680620}
   m_Layer: 0
   m_Name: Dave
   m_TagString: NPC
@@ -972,9 +1250,9 @@ MonoBehaviour:
   - Can you help me collect berries? Hmmm?
   - Great!
   - Take care adventurer
-  choiceIndex: 2
   index: 0
   showDlg: 0
+  choiceIndex: 2
 --- !u!136 &1972680616
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -1008,7 +1286,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: cc1c7352e9c212345882989f282f2885, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1046,12 +1324,70 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1972680614}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.994828, y: 1, z: 31.3}
+  m_LocalPosition: {x: 7.11, y: 1, z: 33.22}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 7
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1972680620
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1972680614}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e524061f3b424714daf70f217af3796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  bottle: {fileID: 0}
+  soul: 1
 --- !u!1 &2014809357
 GameObject:
   m_ObjectHideFlags: 0
@@ -1065,6 +1401,7 @@ GameObject:
   - component: {fileID: 2014809359}
   - component: {fileID: 2014809358}
   - component: {fileID: 2014809362}
+  - component: {fileID: 2014809363}
   m_Layer: 0
   m_Name: Kevin
   m_TagString: NPC
@@ -1105,7 +1442,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: 42598bff34f67f6478a7b34763a19e7d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -1143,7 +1480,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014809357}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 11.994828, y: 1, z: 31.3}
+  m_LocalPosition: {x: 11.994828, y: 1, z: 35.34}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -1156,7 +1493,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2014809357}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 98b1b5d2083a175489e2471b3f00567e, type: 3}
   m_Name: 
@@ -1164,8 +1501,66 @@ MonoBehaviour:
   text:
   - Hello
   - My name is Kevin
-  - Whatcha doing?
+  - I like pizza
   - Kevin is my name
-  - Squirrel
+  - Bye!
   index: 0
   showDlg: 0
+--- !u!114 &2014809363
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2014809357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e524061f3b424714daf70f217af3796f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  attributes:
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  - name: 
+    curValue: 0
+    maxValue: 0
+    tempValue: 0
+    regenValue: 0
+    display: {fileID: 0}
+  baseStats:
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  - name: 
+    value: 0
+    modifier: 0
+    tempValue: 0
+  bottle: {fileID: 0}
+  soul: 1

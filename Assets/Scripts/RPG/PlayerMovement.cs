@@ -34,28 +34,30 @@ public class PlayerMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        //if our character is grounded
 
-        if (charC.isGrounded)
+        if (GameManager.gamePlayStates == GamePlayStates.Game)
         {
-            //set moveDir to the inputs direction
-            moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
-            //moveDir's forward is changed from global z (forward) to the Game Objects local z (forward)//allows us to move where player is facing
-            moveDir = transform.TransformDirection(moveDir); //allows us to move where player is facing
-            //moveDir is multiplied by speed so we move at a decent pace
-            moveDir *= moveSpeed;
-            //if the input buttion for jump is pressed then
-            if (Input.GetButton("Jump"))
+            if (charC.isGrounded)//if our character is grounded
             {
-                //our moveDir.y is equal to our jump speed
-                moveDir.y = jumpSpeed;
+                //set moveDir to the inputs direction
+                moveDir = new Vector3(Input.GetAxis("Horizontal"), 0, Input.GetAxis("Vertical"));
+                //moveDir's forward is changed from global z (forward) to the Game Objects local z (forward)//allows us to move where player is facing
+                moveDir = transform.TransformDirection(moveDir); //allows us to move where player is facing
+                //moveDir is multiplied by speed so we move at a decent pace
+
+                moveDir *= moveSpeed;
+                //if the input buttion for jump is pressed then
+                if (Input.GetButton("Jump"))
+                {
+                    //our moveDir.y is equal to our jump speed
+                    moveDir.y = jumpSpeed;
+                }
             }
-            
+            //regardless of if we are grounded or not the players moveDir.y is always affected by gravity timesed my time.deltaTime to normalize it
+            moveDir.y -= gravity * Time.deltaTime;
+            //we then tell the character Controller that it is moving in a direction multiplied Time.deltaTime
+            charC.Move(moveDir*Time.deltaTime);
         }
 
-        //regardless of if we are grounded or not the players moveDir.y is always affected by gravity timesed my time.deltaTime to normalize it
-        moveDir.y -= gravity * Time.deltaTime;
-        //we then tell the character Controller that it is moving in a direction multiplied Time.deltaTime
-        charC.Move(moveDir*Time.deltaTime);
     }
 }

@@ -2,26 +2,41 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class DialogueOnceChoiceApproval : MonoBehaviour
+public class DialogueOnceChoiceApproval : DialogueOneChoice
 {
-    [Header("Display Dialogue")]
-    public string[] text;
-    [Header("Index Markers")]
-    public int choiceIndex;
-    public int index;
-    [Header("How much the NPC likes us")]
-    public int approval;
-    [Header("Can We See the DLG")]
-    public bool showDlg;
-    [Header("The dialogue based on approval")]
-    public string[] likeText;
-    public string[] neutralText;
-    public string[] dislikeText;
+    //inherited data
+    //string[] text - this si the lines of dialogue we are showing
+    //int index - the current line of dialogue we are shoing
+    //bool showDlg - the ability to turn on and off UI
+    //int choiceIndex - this is the index of our quest...the marker for where to put the yes/no response
+   [Header("How much the NPC likes us")]
+    public int approval;//-1,0,1
+   [Header("The dialogue based on approval")]
+    public string[] likeText;//1
+    public string[] neutralText;//0
+    public string[] dislikeText;//-1
 
     private void Start()
     {
         //set dialogue and values to neutral
         approval = 0;
+        ChangeDlg(approval);
+    }
+
+    private void ChangeDlg(int approval)
+    {
+        switch (approval)//assigns the values of text according to approval
+        {
+            case -1:
+                text = dislikeText;
+                break;
+            case 0:
+                text = neutralText;
+                break;
+            case 1:
+                text = likeText;
+                break;
+        }
     }
 
     void OnGUI()
@@ -42,19 +57,24 @@ public class DialogueOnceChoiceApproval : MonoBehaviour
             {
                 if (GUI.Button(new Rect(GameManager.scr.x * 14, GameManager.scr.y * 8.5f, GameManager.scr.x * 1, GameManager.scr.y * 0.5f), "Yes"))//positive option - yes
                 {
-                    //like you
-                    //change what we are reading from
-                    approval = 1;
-                    index++;//move on                
+                    index++;//move on    
+                    if (approval < 1)
+                    {
+                        approval++;
+                    }
+                    ChangeDlg(approval);
+                                
                     
                 }
 
                 else if (GUI.Button(new Rect(GameManager.scr.x * 15, GameManager.scr.y * 8.5f, GameManager.scr.x * 1, GameManager.scr.y * 0.5f), "No"))//negative - no
                 {
-                    //like you less
-                    //change what we are reading from
-                    approval = -1;
                     index = text.Length - 1;//skip to last line
+                    if (approval > -1)
+                    {
+                        approval--;
+                    }
+                    ChangeDlg(approval);
                 }
             }                   
 
@@ -62,8 +82,9 @@ public class DialogueOnceChoiceApproval : MonoBehaviour
             {
                 if (GUI.Button(new Rect(GameManager.scr.x * 15, GameManager.scr.y * 8.5f, GameManager.scr.x * 1, GameManager.scr.y * 0.5f), "Bye."))//bye button
                 {
-                    index = 1;//set index to 1
+                    index = 0;
                     showDlg = false;//ends convo/exit convo
+                    GameManager.gamePlayStates = GamePlayStates.Game;
                 }
 
             }                   
